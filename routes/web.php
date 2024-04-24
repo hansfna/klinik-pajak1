@@ -1,17 +1,12 @@
 <?php
 
-use App\Http\Controllers\ListBarangController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformasiKalkulatorController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// Route::get('/informasi', [InformasiKalkulatorController::class, 'index'])->name('informasiWajibPajak'); // Perbarui rute di sini
+// Route::post('/save-informasi', [InformasiKalkulatorController::class, 'saveInformasiWajibPajak'])->name('saveInformasiWajibPajak');
 
-Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
+
+Route::get('/informasi', [InformasiKalkulatorController::class, 'tampilkan']);
+Route::get('/home', [HomeController::class, 'tampilkan']);
